@@ -156,7 +156,8 @@ function processContains(item, list, callback) {
  * should return 3.
  */
 function processDuplicateFree(list, callback) {
-  return callback(list.reduce());
+  const [...set] = new Set(list);
+  return callback(set);
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
